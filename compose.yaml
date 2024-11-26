@@ -1,0 +1,14 @@
+services:
+    application:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: "npm run start"
+        ports:
+            - 127.0.0.1:3000:3000
+        volumes:
+            - ./:/home/rajProject
+            - nm:/home/rajProject/node_modules
+
+volumes:
+    nm:
